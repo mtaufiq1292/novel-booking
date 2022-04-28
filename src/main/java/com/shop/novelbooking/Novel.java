@@ -30,7 +30,7 @@ public class Novel {
         return this.name;
     }
 
-    public String getauthor() {
+    public String getAuthor() {
         return this.author;
     }
 
@@ -42,7 +42,7 @@ public class Novel {
         this.name = name;
     }
 
-    public void setauthor(String author) {
+    public void setAuthor(String author) {
         this.author = author;
     }
 
