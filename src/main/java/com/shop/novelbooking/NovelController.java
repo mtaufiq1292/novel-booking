@@ -1,6 +1,5 @@
 package com.shop.novelbooking;
 
-import java.nio.channels.NotYetBoundException;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,6 +20,10 @@ NovelController(NovelRepository repository) {
   this.repository = repository;
 }
 
+@GetMapping("/latest/novels")
+List<Novel> latest() {
+  return repository.findAll();
+}
 
 // Aggregate root
 // tag::get-aggregate-root[]
