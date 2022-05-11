@@ -1,5 +1,6 @@
 package com.shop.novelbooking;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,10 +21,25 @@ NovelController(NovelRepository repository) {
   this.repository = repository;
 }
 
-@GetMapping("/latest/novels")
-List<Novel> latest() {
-  return repository.findAll();
+@GetMapping("/sample")
+List<Novel> sample() {
+  // List<Novel> responseNovelList = repository.findAll();
+  // if(responseNovelList != null && responseNovelList.size() > 0){
+  //   Novel responseNovel = responseNovelList.get(0);
+  //   responseNovel.setName("Updated 10 May 2022 : 0659AM");
+
+  // }
+
+  List<Novel> responseNovelList = new LinkedList<Novel>();
+  Novel responseNovel = new Novel();
+  // responseNovel.setName("Start on 1 May 2022 : 0659AM");
+  responseNovel.setName("Updated 2022-05-11-2148");
+
+  responseNovelList.add(responseNovel);
+
+  return responseNovelList;
 }
+
 
 // Aggregate root
 // tag::get-aggregate-root[]
