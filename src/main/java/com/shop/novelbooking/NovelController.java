@@ -33,7 +33,7 @@ List<Novel> sample() {
   List<Novel> responseNovelList = new LinkedList<Novel>();
   Novel responseNovel = new Novel();
   // responseNovel.setName("Start on 1 May 2022 : 0659AM");
-  responseNovel.setName("Updated 2022-05-11-2148");
+  responseNovel.setName("Updated 2022-05-25-2103");
 
   responseNovelList.add(responseNovel);
 
